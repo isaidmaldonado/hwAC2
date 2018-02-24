@@ -118,7 +118,7 @@ int Autocompleter::size_recurse(Node* root)
 void Autocompleter::completions_recurse(string x, Node* root, vector<Entry> &T)
 {
 	if (root == nullptr)
-		return;
+	{} /////////////////////////////
 	else
 	{
 		if (x == root->e.s.substr(0, x.size()))
