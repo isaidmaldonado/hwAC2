@@ -70,7 +70,9 @@ void Autocompleter::completions(string x, vector<string> &T)
 	vector<Entry> V;
 	completions_recurse(x, walker, V);
 	if (V.size() == 0)
+	{
 		return;
+	}
 	else
 	{
 		int maxindex = 0;
@@ -140,7 +142,7 @@ void Autocompleter::completions_recurse(string x, Node* root, vector<Entry> &T)
 void Autocompleter::insert_recurse(Entry e, Node* root)
 {
 	if (root->e.s == e.s)
-		return;
+	{ }
 	else if (root->e.s < e.s)
 	{
 		if (root->right != nullptr)
@@ -171,7 +173,7 @@ void Autocompleter::insert_recurse(Entry e, Node* root)
 void Autocompleter::rebalance(Node* root)
 {
 	if (abs(height(root->left) - height(root->right)) <= 1)
-		return;
+	{ }
 	else
 	{
 		if (height(root->right) > height(root->left))
