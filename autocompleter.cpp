@@ -114,6 +114,7 @@ int Autocompleter::size_recurse(Node* root)
 // -n is the size of the BST rooted at root.
 // -k is the number of Entrys in the BST rooted at root
 //  whose strings start with x.
+// comment  by ryan
 void Autocompleter::completions_recurse(string x, Node* root, vector<Entry> &T)
 {
 	if (root == nullptr)
